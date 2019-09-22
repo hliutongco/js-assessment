@@ -11,18 +11,18 @@ exports.flowControlAnswers = {
     // otherwise the function should return the number, or false if no number
     // was provided or the value provided is not a number
 
-    switch(num){
-      case num % 3 === 0 && num % 5 === 0:
+      if(num % 3 === 0 && num % 5 === 0){
         return "fizzbuzz"
-      case num % 3 === 0:
+      }
+      else if(num % 3 === 0){
         return "fizz"
-      case num % 5 === 0:
+      }
+      else if(num % 5 === 0){
         return "buzz"
-      case typeof num !== "number"
-        return false
-      default:
-        return num
-    }
-
+      }
+      else {
+        return typeof num !== "number" ? false : num
+      }
   }
+
 };
